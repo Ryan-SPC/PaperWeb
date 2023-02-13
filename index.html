@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-    <title>HandRigNet: Neural Network for Hand (Finger, Palm, Wrist) Animation
+    <title>人型骨骼動畫生成模型
     </title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.lp.css">
@@ -62,7 +62,7 @@
             <div class="row">
                 <div class="col-lg-12" style="height:300px;">
                     <div class="intro-message" style="position: relative;padding-top: 0%;padding-bottom: 70%;">
-                        <h1>HandRigNet: 手部動畫生成神經網路</h1>
+                        <h1>人型骨骼動畫生成模型</h1>
                         <ul class="list-inline intro-social-buttons">
                             <li>
                                 <a href="demo.html" class="btn btn-default btn-lg"> 
@@ -101,7 +101,7 @@
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
 					<br><br><br>
-                    <img class="img-responsive" src="img/dog.png" alt="">
+                    <img class="img-responsive" src="img/anime_result.jpg" alt="">
                 </div>
             </div>
 
@@ -121,8 +121,11 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">引用文獻</h2>
 					<p class="lead">RigNet: Neural Rigging for Articulated Characters</p>
-                    <p>Zhan Xu, Yang Zhou, Evangelos Kalogerakis, Chris Landreth and Karan Singh
-                        ACM Transactions on Graphics (SIGGRAPH), 2020</p>
+                    <p>Xu 於 2020 年提出 RigNet，一個只要輸入 3D 腳色模型就能製作骨骼動畫的端到端自動方法。
+                        給定一個 3D 腳色作為輸入，RigNet 會試著產生出一副骨架，此骨架會盡可能符合動畫師對關節配置和拓撲學上的期待。
+                        此方法同時還會根據預測的骨架去計算蒙皮權重 (Skin Weights)。該研究以圖卷積網路為基礎，透過池化與多層感知器進行堆疊，
+                        訓練出不同模型來處理生成骨骼動畫中會面對的問題。</p>
+                </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
 					<br><br><br>
@@ -144,12 +147,22 @@
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-					<h2 class="section-heading">示範</h2>
-					<p class="lead">內文內文內文內文內文內文內文內文內文內文</p>
+					<h2 class="section-heading">結果</h2>
+					<p>
+                        本研究開發出一個新的骨骼動畫生成方法，可以為人型角色生成包含手指的骨架。此方法彌補 RigNet 中對手掌結構資料的缺失。透過機器學習模型對手掌進行分割並重新生成其骨架。和其他骨骼動畫程式相比，本研究開發的系統能生成細部手指骨架，讓需要在動畫上呈現手指動作的使用者不需要額外手動進行生成。
+                    </p>
+                    <p>
+                        本研究將手掌骨架生成模組獨立出來(HandNet)，此模組可以與其他骨架生成系統對接。如果使用者偏好使用其他骨架生成方法，或是已經擁有身體骨架，但是缺少手掌結構，他們可以直接將現有的骨架輸入至 HandNet 便能獲得完整的骨架結構。本研究對 RigNet 與 Mixamo 生成出的手掌骨架進行比對，比對結果顯示我們方式明顯優於 RigNet。
+                    </p>
+                    <iframe src="https://drive.google.com/file/d/1djkqiwPmSLb9l3_AXuNGGJnp8BVWCuKU/preview" width="640" height="480" allow="autoplay"></iframe>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
 					<br><br><br>
-                    <img class="img-responsive" src="img/phones.png" alt="">
+                    <img class="img-responsive" src="img/sk_result.jpg" alt="">
+                    <br>
+                    <img class="img-responsive" src="img/skin_result.jpg" alt="">
+                    <br>
+                    
                 </div>
             </div>
 
