@@ -1,0 +1,4433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CCCreateHeadStageTwoDlg</class>
+ <widget class="QWidget" name="CCCreateHeadStageTwoDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>1016</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Refine Mesh</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#CCCreateHeadStageTwoDlg  {border:1px solid #505050;border-top:0px solid #505050;}
+
+QPushButton{color:#c8c8c8;background-color:#282828; border:1px solid #505050;;}
+QPushButton:hover{color:#c8c8c8;background-color:#505050;border:1px solid #82be0f; }
+QPushButton:pressed{color:#000000;background-color:#282828;border:1px solid #82be0f; }
+QPushButton:disabled{color:#464646;border:1px solid #3c3c3c;}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0,0">
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <property name="leftMargin">
+    <number>10</number>
+   </property>
+   <property name="topMargin">
+    <number>10</number>
+   </property>
+   <property name="rightMargin">
+    <number>10</number>
+   </property>
+   <property name="bottomMargin">
+    <number>15</number>
+   </property>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_10">
+     <property name="spacing">
+      <number>15</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="qtStage1PushButton">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>202</width>
+           <height>42</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>65535</width>
+           <height>42</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Load Image</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	border:1px solid #505050; border-radius: 5px;
+	background-color: #282828;
+	background-position: center;
+    background-image: url(:/plugin/CCHeadshot3/Icon/RefineMesh/Side/load-image.svg);
+    background-repeat: no-repeat;
+}
+
+QPushButton:hover {
+	background-color: #505050;
+    background-image: url(:/plugin/CCHeadshot3/Icon/RefineMesh/Side/load-image.svg);
+    background-repeat: no-repeat;
+}
+
+QPushButton:pressed {
+	background-color: #282828;
+    background-image: url(:/plugin/CCHeadshot3/Icon/RefineMesh/Side/load-image.svg);
+    background-repeat: no-repeat;
+}
+
+QPushButton:checked {
+	background-color: #82BE0F;
+    background-image: url(:/plugin/CCHeadshot3/Icon/RefineMesh/Side/load-image_sel.svg);
+    background-repeat: no-repeat;
+}
+
+
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>160</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="qtStage2PushButton">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>202</width>
+           <height>42</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>65535</width>
+           <height>42</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Align Points</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	border:1px solid #505050; border-radius: 5px;
+	background-color: #282828;
+	background-position: center;
+    background-image: url(:/plugin/CCHeadshot3/Icon/RefineMesh/Side/place-mesh.svg);
+    background-repeat: no-repeat;
+}
+
+QPushButton:hover {
+	background-color: #505050;
+    background-image: url(:/plugin/CCHeadshot3/Icon/RefineMesh/Side/place-mesh.svg);
+    background-repeat: no-repeat;
+}
+
+QPushButton:pressed {
+	background-color: #282828;
+    background-image: url(:/plugin/CCHeadshot3/Icon/RefineMesh/Side/place-mesh.svg);
+    background-repeat: no-repeat;
+}
+
+QPushButton:checked {
+	background-color: #82BE0F;
+    background-image: url(:/plugin/CCHeadshot3/Icon/RefineMesh/Side/place-mesh_sel.svg);
+    background-repeat: no-repeat;
+}
+
+QPushButton:disabled {
+	background-color: #282828;
+    background-image: url(:/plugin/CCHeadshot3/Icon/RefineMesh/Side/place-mesh_dis.svg);
+    background-repeat: no-repeat;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>200</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="qtStage3PushButton">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>202</width>
+           <height>42</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>65535</width>
+           <height>42</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Align Mesh</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	border:1px solid #505050; border-radius: 5px;
+	background-color: #282828;
+	background-position: center;
+    background-image: url(:/plugin/CCHeadshot3/Icon/RefineMesh/Side/align-mesh.svg);
+    background-repeat: no-repeat;
+}
+
+QPushButton:hover {
+	background-color: #505050;
+    background-image: url(:/plugin/CCHeadshot3/Icon/RefineMesh/Side/align-mesh.svg);
+    background-repeat: no-repeat;
+}
+
+QPushButton:pressed {
+	background-color: #282828;
+    background-image: url(:/plugin/CCHeadshot3/Icon/RefineMesh/Side/align-mesh.svg);
+    background-repeat: no-repeat;
+}
+
+QPushButton:checked {
+	background-color: #82BE0F;
+    background-image: url(:/plugin/CCHeadshot3/Icon/RefineMesh/Side/align-mesh_sel.svg);
+    background-repeat: no-repeat;
+}
+
+QPushButton:disabled {
+	background-color: #282828;
+    background-image: url(:/plugin/CCHeadshot3/Icon/RefineMesh/Side/align-mesh_dis.svg);
+    background-repeat: no-repeat;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>160</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_28">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="Line" name="line_10">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>1</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>1</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border:1px solid #505050;</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QWidget" name="qtRefineMeshwidget" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#qtRefineMeshwidget  {border:0px solid #505050}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,1,0">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QStackedWidget" name="qtEditToolbaSstackedWidget">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="qtEditModeWidget">
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <property name="leftMargin">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>5</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_0" stretch="1,1,1,1,1,1,0">
+              <property name="spacing">
+               <number>3</number>
+              </property>
+              <property name="sizeConstraint">
+               <enum>QLayout::SetDefaultConstraint</enum>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>25</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Part:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_14">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>3</width>
+                  <height>0</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtSkullToolButton">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Skull</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/skull.svg</normaloff>
+                  <activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/skull_sel.svg</activeon>
+                  <selectedoff>:/plugin/CCHeadshot3/Icon/RefineMesh/skull_sel.svg</selectedoff>:/plugin/CCHeadshot3/Icon/RefineMesh/skull.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>40</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtEyeToolButton">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>65</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>65</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Eyes</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    padding-right: 15px;   /* 保留右側 menu 區，icon 只在左 40 區域置中 */
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>40</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+                <property name="popupMode">
+                 <enum>QToolButton::MenuButtonPopup</enum>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtNoseToolButton">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>65</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>65</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Nose</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    padding-right: 15px;   /* 保留右側 menu 區，icon 只在左 40 區域置中 */
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>40</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+                <property name="popupMode">
+                 <enum>QToolButton::MenuButtonPopup</enum>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtLipToolButton">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Lip</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/lips.svg</normaloff>
+                  <activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/lips_sel.svg</activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/lips.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>40</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Expanding</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_11">
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="Line" name="line">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>1</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: #505050
+</string>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <property name="spacing">
+               <number>3</number>
+              </property>
+              <item>
+               <widget class="QToolButton" name="qtLoadSideImageToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Load</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/Load.svg</normaloff>
+                  <normalon>:/plugin/CCHeadshot3/Icon/Load_sel.svg</normalon>
+                  <disabledoff>:/plugin/CCHeadshot3/Icon/Load_dis.svg</disabledoff>
+                  <disabledon>:/plugin/CCHeadshot3/Icon/Load_dis.svg</disabledon>
+                  <activeoff>:/plugin/CCHeadshot3/Icon/Load.svg</activeoff>
+                  <activeon>:/plugin/CCHeadshot3/Icon/Load_sel.svg</activeon>
+                  <selectedoff>:/plugin/CCHeadshot3/Icon/Load_sel.svg</selectedoff>
+                  <selectedon>:/plugin/CCHeadshot3/Icon/Load_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/Load.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>23</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtAiSideGeneratePushButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="palette">
+                 <palette>
+                  <active>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Base">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Window">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="PlaceholderText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="128">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </active>
+                  <inactive>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Base">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Window">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="PlaceholderText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="128">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </inactive>
+                  <disabled>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>70</red>
+                      <green>70</green>
+                      <blue>70</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>70</red>
+                      <green>70</green>
+                      <blue>70</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>70</red>
+                      <green>70</green>
+                      <blue>70</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Base">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Window">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="PlaceholderText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="128">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </disabled>
+                 </palette>
+                </property>
+                <property name="toolTip">
+                 <string>ai generate side image</string>
+                </property>
+                <property name="text">
+                 <string>AI Generate</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/GenerateCharacter/ai-gen.svg</normaloff>:/plugin/CCHeadshot3/Icon/GenerateCharacter/ai-gen.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_15">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>3</number>
+                </property>
+                <property name="rightMargin">
+                 <number>3</number>
+                </property>
+                <item>
+                 <widget class="Line" name="line_6">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>1</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame{border:none; background-color:#505050}</string>
+                  </property>
+                  <property name="locale">
+                   <locale language="English" country="UnitedStatesMinorOutlyingIslands"/>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Sunken</enum>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtSelectToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Select</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/CameraTool/Select.svg</normaloff>
+                  <normalon>:/plugin/CCHeadshot3/Icon/CameraTool/Select_sel.svg</normalon>
+                  <disabledoff>:/plugin/CCHeadshot3/Icon/CameraTool/Select_dis.svg</disabledoff>
+                  <disabledon>:/plugin/CCHeadshot3/Icon/CameraTool/Select_dis.svg</disabledon>
+                  <activeon>:/plugin/CCHeadshot3/Icon/CameraTool/Select_sel.svg</activeon>
+                  <selectedoff>:/plugin/CCHeadshot3/Icon/CameraTool/Select_sel.svg</selectedoff>
+                  <selectedon>:/plugin/CCHeadshot3/Icon/CameraTool/Select_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/CameraTool/Select.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>23</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtCamZoomToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Zoom</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom.svg</normaloff>
+                  <normalon>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom_sel.svg</normalon>
+                  <disabledoff>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom_dis.svg</disabledoff>
+                  <disabledon>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom_dis.svg</disabledon>
+                  <activeon>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom_sel.svg</activeon>
+                  <selectedoff>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom_sel.svg</selectedoff>
+                  <selectedon>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>23</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtCamMoveToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Move</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove.svg</normaloff>
+                  <normalon>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove_sel.svg</normalon>
+                  <disabledoff>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove_dis.svg</disabledoff>
+                  <disabledon>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove_dis.svg</disabledon>
+                  <activeon>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove_sel.svg</activeon>
+                  <selectedoff>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove_sel.svg</selectedoff>
+                  <selectedon>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>23</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+                <attribute name="buttonGroup">
+                 <string notr="true">buttonGroup</string>
+                </attribute>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_12">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>3</number>
+                </property>
+                <property name="rightMargin">
+                 <number>3</number>
+                </property>
+                <item>
+                 <widget class="Line" name="line_4">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>1</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame{border:none; background-color:#505050}</string>
+                  </property>
+                  <property name="locale">
+                   <locale language="English" country="UnitedStatesMinorOutlyingIslands"/>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Sunken</enum>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtFocusToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Focus</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/focus.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/focus.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtCResetViewToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Reset View</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/home.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/home.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_13">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>3</number>
+                </property>
+                <property name="rightMargin">
+                 <number>3</number>
+                </property>
+                <item>
+                 <widget class="Line" name="line_5">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>1</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame{border:none; background-color:#505050}</string>
+                  </property>
+                  <property name="locale">
+                   <locale language="English" country="UnitedStatesMinorOutlyingIslands"/>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Sunken</enum>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtResetAllToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>44</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>44</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Reset All</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    padding-right: 15px; 
+}</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/reset-all.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/reset-all.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>23</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="popupMode">
+                 <enum>QToolButton::MenuButtonPopup</enum>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtResetSelectedToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>44</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>44</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Reset Select</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    padding-right: 15px; 
+}</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/reset-selected.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/reset-selected.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>23</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="popupMode">
+                 <enum>QToolButton::MenuButtonPopup</enum>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_16">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>3</number>
+                </property>
+                <property name="rightMargin">
+                 <number>3</number>
+                </property>
+                <item>
+                 <widget class="Line" name="line_9">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>1</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame{border:none; background-color:#505050}</string>
+                  </property>
+                  <property name="locale">
+                   <locale language="English" country="UnitedStatesMinorOutlyingIslands"/>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Sunken</enum>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtMirrorToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Mirror</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/symmetry.svg</normaloff>
+                  <activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/symmetry_sel.svg</activeon>
+                  <selectedoff>:/plugin/CCHeadshot3/Icon/RefineMesh/symmetry_sel.svg</selectedoff>
+                  <selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/symmetry_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/symmetry.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtRightMirrorToLeftBtn">
+                <property name="minimumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Mirror Right to Left </string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/mirror-to-left.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/mirror-to-left.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtLeftMirrorToRightBtn">
+                <property name="minimumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Mirror Left to Right </string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/mirror-to-right.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/mirror-to-right.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_14">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>3</number>
+                </property>
+                <property name="rightMargin">
+                 <number>3</number>
+                </property>
+                <item>
+                 <widget class="Line" name="line_8">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>1</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame{border:none; background-color:#505050}</string>
+                  </property>
+                  <property name="locale">
+                   <locale language="English" country="UnitedStatesMinorOutlyingIslands"/>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Sunken</enum>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtHandleBreakToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Handle Break</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/break.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/break.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>23</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtHandleUnifyToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Handle Unify</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/unify.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/unify.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>23</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtLoadIniToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Load</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/Load.svg</normaloff>
+                  <normalon>:/plugin/CCHeadshot3/Icon/Load_sel.svg</normalon>
+                  <disabledoff>:/plugin/CCHeadshot3/Icon/Load_dis.svg</disabledoff>
+                  <disabledon>:/plugin/CCHeadshot3/Icon/Load_dis.svg</disabledon>
+                  <activeoff>:/plugin/CCHeadshot3/Icon/Load.svg</activeoff>
+                  <activeon>:/plugin/CCHeadshot3/Icon/Load_sel.svg</activeon>
+                  <selectedoff>:/plugin/CCHeadshot3/Icon/Load_sel.svg</selectedoff>
+                  <selectedon>:/plugin/CCHeadshot3/Icon/Load_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/Load.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>23</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtSaveIniToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>29</width>
+                  <height>29</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Save</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/Save.svg</normaloff>
+                  <normalon>:/plugin/CCHeadshot3/Icon/Save_sel.svg</normalon>
+                  <disabledoff>:/plugin/CCHeadshot3/Icon/Save_dis.svg</disabledoff>
+                  <disabledon>:/plugin/CCHeadshot3/Icon/Save_dis.svg</disabledon>
+                  <activeoff>:/plugin/CCHeadshot3/Icon/Save.svg</activeoff>
+                  <activeon>:/plugin/CCHeadshot3/Icon/Save_sel.svg</activeon>
+                  <selectedoff>:/plugin/CCHeadshot3/Icon/Save_sel.svg</selectedoff>
+                  <selectedon>:/plugin/CCHeadshot3/Icon/Save_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/Save.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>23</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,0,0,0,0,0,0,0,1">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QToolButton" name="qtShowHideToolButton">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Show / Hide</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/show.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/show.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>23</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="checked">
+                 <bool>false</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_17">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>3</number>
+                </property>
+                <property name="rightMargin">
+                 <number>3</number>
+                </property>
+                <item>
+                 <widget class="Line" name="line_7">
+                  <property name="maximumSize">
+                   <size>
+                    <width>1</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame{border:none; background-color:#505050}</string>
+                  </property>
+                  <property name="locale">
+                   <locale language="English" country="UnitedStatesMinorOutlyingIslands"/>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Sunken</enum>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Size</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QColorButton" name="qtPointColorButton">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>48</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>48</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Change Point Color</string>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>20</width>
+                  <height>16</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboSpinBox" name="qtPointSizeCombospinbox">
+                <property name="minimumSize">
+                 <size>
+                  <width>80</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>200</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="value" stdset="0">
+                 <number>5</number>
+                </property>
+                <property name="spinMaximum" stdset="0">
+                 <number>40</number>
+                </property>
+                <property name="resetOnDoubleClick" stdset="0">
+                 <bool>true</bool>
+                </property>
+                <property name="defaultValue" stdset="0">
+                 <number>5</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>15</width>
+                  <height>10</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>Photo Opacity</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboSpinBox" name="qtPictureOpacityCombospinbox">
+                <property name="minimumSize">
+                 <size>
+                  <width>80</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>200</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="value" stdset="0">
+                 <number>50</number>
+                </property>
+                <property name="spinMinimum" stdset="0">
+                 <number>10</number>
+                </property>
+                <property name="spinMaximum" stdset="0">
+                 <number>100</number>
+                </property>
+                <property name="resetOnDoubleClick" stdset="0">
+                 <bool>true</bool>
+                </property>
+                <property name="defaultValue" stdset="0">
+                 <number>50</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="qtPreviewModeWidget">
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_11">
+              <property name="spacing">
+               <number>3</number>
+              </property>
+              <property name="sizeConstraint">
+               <enum>QLayout::SetDefaultConstraint</enum>
+              </property>
+              <item>
+               <widget class="QToolButton" name="qtLoadSidePicturePushButton2">
+                <property name="minimumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="palette">
+                 <palette>
+                  <active>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Base">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Window">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="PlaceholderText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="128">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </active>
+                  <inactive>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Base">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Window">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="PlaceholderText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="128">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </inactive>
+                  <disabled>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>70</red>
+                      <green>70</green>
+                      <blue>70</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>70</red>
+                      <green>70</green>
+                      <blue>70</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>70</red>
+                      <green>70</green>
+                      <blue>70</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Base">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Window">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="PlaceholderText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="128">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </disabled>
+                 </palette>
+                </property>
+                <property name="toolTip">
+                 <string>Load side picture</string>
+                </property>
+                <property name="text">
+                 <string>Load Picture</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/AIGen/open.svg</normaloff>:/plugin/CCHeadshot3/Icon/AIGen/open.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtAiGeneratePushButton2">
+                <property name="minimumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="palette">
+                 <palette>
+                  <active>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Base">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Window">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="PlaceholderText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="128">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </active>
+                  <inactive>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Base">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Window">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="PlaceholderText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="128">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </inactive>
+                  <disabled>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>70</red>
+                      <green>70</green>
+                      <blue>70</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>70</red>
+                      <green>70</green>
+                      <blue>70</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>70</red>
+                      <green>70</green>
+                      <blue>70</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Base">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Window">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>40</red>
+                      <green>40</green>
+                      <blue>40</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="PlaceholderText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="128">
+                      <red>200</red>
+                      <green>200</green>
+                      <blue>200</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </disabled>
+                 </palette>
+                </property>
+                <property name="toolTip">
+                 <string>ai generate side image</string>
+                </property>
+                <property name="text">
+                 <string>AI Generate</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/GenerateCharacter/ai-gen.svg</normaloff>:/plugin/CCHeadshot3/Icon/GenerateCharacter/ai-gen.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_20">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>3</number>
+                </property>
+                <property name="rightMargin">
+                 <number>3</number>
+                </property>
+                <item>
+                 <widget class="Line" name="line_13">
+                  <property name="maximumSize">
+                   <size>
+                    <width>1</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame{border:none; background-color:#505050}</string>
+                  </property>
+                  <property name="locale">
+                   <locale language="English" country="UnitedStatesMinorOutlyingIslands"/>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Sunken</enum>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtPreviewSelectToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Select</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/CameraTool/Select.svg</normaloff>
+                  <normalon>:/plugin/CCHeadshot3/Icon/CameraTool/Select_sel.svg</normalon>
+                  <disabledoff>:/plugin/CCHeadshot3/Icon/CameraTool/Select_dis.svg</disabledoff>
+                  <disabledon>:/plugin/CCHeadshot3/Icon/CameraTool/Select_dis.svg</disabledon>
+                  <activeon>:/plugin/CCHeadshot3/Icon/CameraTool/Select_sel.svg</activeon>
+                  <selectedoff>:/plugin/CCHeadshot3/Icon/CameraTool/Select_sel.svg</selectedoff>
+                  <selectedon>:/plugin/CCHeadshot3/Icon/CameraTool/Select_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/CameraTool/Select.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtPreviewCamZoomToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Zoom</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom.svg</normaloff>
+                  <normalon>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom_sel.svg</normalon>
+                  <disabledoff>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom_dis.svg</disabledoff>
+                  <disabledon>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom_dis.svg</disabledon>
+                  <activeon>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom_sel.svg</activeon>
+                  <selectedoff>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom_sel.svg</selectedoff>
+                  <selectedon>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/CameraTool/CamZoom.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtPreviewCamMoveToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Move</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove.svg</normaloff>
+                  <normalon>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove_sel.svg</normalon>
+                  <disabledoff>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove_dis.svg</disabledoff>
+                  <disabledon>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove_dis.svg</disabledon>
+                  <activeon>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove_sel.svg</activeon>
+                  <selectedoff>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove_sel.svg</selectedoff>
+                  <selectedon>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/CameraTool/CamMove.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_19">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>3</number>
+                </property>
+                <property name="rightMargin">
+                 <number>3</number>
+                </property>
+                <item>
+                 <widget class="Line" name="line_11">
+                  <property name="maximumSize">
+                   <size>
+                    <width>1</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame{border:none; background-color:#505050}</string>
+                  </property>
+                  <property name="locale">
+                   <locale language="English" country="UnitedStatesMinorOutlyingIslands"/>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Sunken</enum>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtFocusToolButton2">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Focus</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/focus.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/focus.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtCResetViewToolButton2">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Reset View</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/home.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/home.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_21">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>3</number>
+                </property>
+                <property name="rightMargin">
+                 <number>3</number>
+                </property>
+                <item>
+                 <widget class="Line" name="line_12">
+                  <property name="maximumSize">
+                   <size>
+                    <width>1</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame{border:none; background-color:#505050}</string>
+                  </property>
+                  <property name="locale">
+                   <locale language="English" country="UnitedStatesMinorOutlyingIslands"/>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Sunken</enum>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtPreviewShowHideToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Show / Hide</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/show.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/show.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="checked">
+                 <bool>false</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtPreviewFlipToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Flip</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/flip.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/flip.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="qtPreviewMaterialToolButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Render</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="CCHeadshot3.qrc">
+                  <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/render-model.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/render-model.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="checked">
+                 <bool>false</bool>
+                </property>
+                <property name="autoRaise">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_22">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>3</number>
+                </property>
+                <property name="rightMargin">
+                 <number>3</number>
+                </property>
+                <item>
+                 <widget class="Line" name="line_14">
+                  <property name="maximumSize">
+                   <size>
+                    <width>1</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QFrame{border:none; background-color:#505050}</string>
+                  </property>
+                  <property name="locale">
+                   <locale language="English" country="UnitedStatesMinorOutlyingIslands"/>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Sunken</enum>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_4">
+                <property name="maximumSize">
+                 <size>
+                  <width>50</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Size</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboSpinBox" name="qtPreviewPointSizeCombospinbox">
+                <property name="minimumSize">
+                 <size>
+                  <width>80</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>200</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="value" stdset="0">
+                 <number>20</number>
+                </property>
+                <property name="spinMaximum" stdset="0">
+                 <number>40</number>
+                </property>
+                <property name="resetOnDoubleClick" stdset="0">
+                 <bool>true</bool>
+                </property>
+                <property name="defaultValue" stdset="0">
+                 <number>20</number>
+                </property>
+                <property name="labelVisible" stdset="0">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>Photo Opacity</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboSpinBox" name="qtPreviewPictureOpacityCombospinbox">
+                <property name="minimumSize">
+                 <size>
+                  <width>80</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>200</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="spinMinimum" stdset="0">
+                 <number>10</number>
+                </property>
+                <property name="spinMaximum" stdset="0">
+                 <number>100</number>
+                </property>
+                <property name="resetOnDoubleClick" stdset="0">
+                 <bool>true</bool>
+                </property>
+                <property name="defaultValue" stdset="0">
+                 <number>70</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QStackedWidget" name="qtEditModeStackedWidget">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="currentIndex">
+           <number>5</number>
+          </property>
+          <widget class="QWidget" name="qtBezierModeWidget">
+           <property name="minimumSize">
+            <size>
+             <width>360</width>
+             <height>360</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+          </widget>
+          <widget class="QWidget" name="qtDisplayWidget">
+           <property name="minimumSize">
+            <size>
+             <width>360</width>
+             <height>360</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QWidget" name="qtPreviewWidget"/>
+          <widget class="QWidget" name="qt3DViewWidget"/>
+          <widget class="QWidget" name="qtSideViewWidget">
+           <property name="minimumSize">
+            <size>
+             <width>360</width>
+             <height>360</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QWidget" name="qtLoadSideImageWidget">
+           <widget class="QWidget" name="qtCustomWidget" native="true">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>20</y>
+              <width>581</width>
+              <height>401</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,0">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <spacer name="verticalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>0</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_18">
+               <item>
+                <spacer name="horizontalSpacer_24">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Expanding</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QItemLabel" name="qtLoadSideImageLabel">
+                 <property name="styleSheet">
+                  <string notr="true">QItemLabel#qtLoadSideImageLabel{border:0px solid #282828; }
+QItemLabel#qtLoadSideImageLabel:hover{border:1px solid #82be0f; }
+</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="CCHeadshot3.qrc">:/plugin/CCHeadshot3/Icon/RefineMesh/Side/add-photo-side.png</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>false</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_25">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Expanding</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0,0">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item>
+                <spacer name="horizontalSpacer_21">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Expanding</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>0</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_13">
+                 <property name="spacing">
+                  <number>10</number>
+                 </property>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="0,0,1">
+                   <property name="spacing">
+                    <number>5</number>
+                   </property>
+                   <item>
+                    <widget class="QPushButton" name="qtDaInfoPushButton">
+                     <property name="maximumSize">
+                      <size>
+                       <width>15</width>
+                       <height>15</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton{font-size:12px;text-align:center; max-height:15px; max-width:15px;color:#c8c8c8;
+background-color:#282828; border:0px solid #505050; }
+QPushButton:hover{color:#c8c8c8;background-color:#282828; }
+QPushButton:pressed{color:#c8c8c8;background-color:#282828; }
+QPushButton:disabled{color:#c8c8c8;border:1px solid #282828;}
+</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../ICMaterialUI/ICMaterialUI.qrc">
+                       <normaloff>:/plugin/ICMaterialUI/icon/Information.svg</normaloff>:/plugin/ICMaterialUI/icon/Information.svg</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>15</width>
+                       <height>15</height>
+                      </size>
+                     </property>
+                     <property name="default">
+                      <bool>false</bool>
+                     </property>
+                     <property name="flat">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_5">
+                     <property name="text">
+                      <string>Please provide a side-view photo so that we can adjust the side profile result.</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_6">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Preferred</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,0">
+                   <property name="spacing">
+                    <number>10</number>
+                   </property>
+                   <property name="sizeConstraint">
+                    <enum>QLayout::SetNoConstraint</enum>
+                   </property>
+                   <item>
+                    <widget class="QPushButton" name="qtLoadSidePicturePushButton">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>330</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>400</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton{color:#c8c8c8;background-color:#282828; border:1px solid #505050;}
+QPushButton:hover{color:#c8c8c8;background-color:#505050;border:1px solid #505050; }
+QPushButton:pressed{color:#000000;background-color:#c8c8c8;border:1px solid #505050; }</string>
+                     </property>
+                     <property name="text">
+                      <string>Load Picture</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="CCHeadshot3.qrc">
+                       <normaloff>:/plugin/CCHeadshot3/Icon/GenerateCharacter/open.svg</normaloff>:/plugin/CCHeadshot3/Icon/GenerateCharacter/open.svg</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>20</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="qtAiGeneratePushButton">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>330</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>400</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton{color:#c8c8c8;background-color:#282828; border:1px solid #505050;}
+QPushButton:hover{color:#c8c8c8;background-color:#505050;border:1px solid #505050; }
+QPushButton:pressed{color:#000000;background-color:#c8c8c8;border:1px solid #505050; }</string>
+                     </property>
+                     <property name="text">
+                      <string>AI Generate</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="CCHeadshot3.qrc">
+                       <normaloff>:/plugin/CCHeadshot3/Icon/GenerateCharacter/ai-gen.svg</normaloff>:/plugin/CCHeadshot3/Icon/GenerateCharacter/ai-gen.svg</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>20</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_22">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Expanding</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>0</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>0</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="qtBezierSideViewWidget"/>
+          <widget class="QWidget" name="qtAutoAlignSideViewWidget"/>
+          <widget class="QWidget" name="qtManualAlignSideViewWidget"/>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QWidget" name="qtControlHeadWidget" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <layout class="QGridLayout" name="gridLayout" columnstretch="0,1,0,0,1,0">
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <item row="2" column="5">
+            <spacer name="horizontalSpacer_17">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Expanding</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="2">
+            <spacer name="horizontalSpacer_18">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="5">
+            <spacer name="horizontalSpacer_15">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Expanding</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0">
+            <spacer name="horizontalSpacer_19">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Expanding</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="2">
+            <spacer name="horizontalSpacer_16">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="3">
+            <spacer name="horizontalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="4">
+            <widget class="QComboDoubleSpinBoxHorizontalLabel" name="qtRotateXSlider">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>400</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="minimum" stdset="0">
+              <double>-100.000000000000000</double>
+             </property>
+             <property name="maximum" stdset="0">
+              <double>100.000000000000000</double>
+             </property>
+             <property name="singleStep" stdset="0">
+              <double>1.000000000000000</double>
+             </property>
+             <property name="resetOnDoubleClick" stdset="0">
+              <bool>true</bool>
+             </property>
+             <property name="labelVisible" stdset="0">
+              <bool>true</bool>
+             </property>
+             <property name="labelName" stdset="0">
+              <string>qtLabel</string>
+             </property>
+             <property name="text">
+              <string>Rotate:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboDoubleSpinBoxHorizontalLabel" name="qtTranslateXSlider">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>400</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="minimum" stdset="0">
+              <double>-100.000000000000000</double>
+             </property>
+             <property name="maximum" stdset="0">
+              <double>100.000000000000000</double>
+             </property>
+             <property name="singleStep" stdset="0">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="resetOnDoubleClick" stdset="0">
+              <bool>true</bool>
+             </property>
+             <property name="labelVisible" stdset="0">
+              <bool>true</bool>
+             </property>
+             <property name="labelName" stdset="0">
+              <string>qtLabel</string>
+             </property>
+             <property name="text">
+              <string>Move X:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QComboDoubleSpinBoxHorizontalLabel" name="qtTranslateZSlider">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>400</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="minimum" stdset="0">
+              <double>-100.000000000000000</double>
+             </property>
+             <property name="maximum" stdset="0">
+              <double>100.000000000000000</double>
+             </property>
+             <property name="singleStep" stdset="0">
+              <double>1.000000000000000</double>
+             </property>
+             <property name="resetOnDoubleClick" stdset="0">
+              <bool>true</bool>
+             </property>
+             <property name="labelVisible" stdset="0">
+              <bool>true</bool>
+             </property>
+             <property name="labelName" stdset="0">
+              <string>qtLabel</string>
+             </property>
+             <property name="text">
+              <string>Scale:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboDoubleSpinBoxHorizontalLabel" name="qtTranslateYSlider">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>400</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="minimum" stdset="0">
+              <double>-100.000000000000000</double>
+             </property>
+             <property name="maximum" stdset="0">
+              <double>100.000000000000000</double>
+             </property>
+             <property name="singleStep" stdset="0">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="resetOnDoubleClick" stdset="0">
+              <bool>true</bool>
+             </property>
+             <property name="labelVisible" stdset="0">
+              <bool>true</bool>
+             </property>
+             <property name="labelName" stdset="0">
+              <string>qtLabel</string>
+             </property>
+             <property name="text">
+              <string>Move Y:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <spacer name="horizontalSpacer_20">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Expanding</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="3">
+            <spacer name="horizontalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="1">
+            <layout class="QHBoxLayout" name="horizontalLayout_23" stretch="0,0">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_49">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="qtInfomationLabel_7">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>15</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>15</width>
+                   <height>15</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel{min-width:15px;max-width:15px;min-height:15px;max-height:15px}</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="../CCTransformer/CCTransformer.qrc">:/plugin/CCTransformer/icon/Information.svg</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_13">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Expanding</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QLabel" name="qtRetryErrorTextMessage_3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mesh Placement Guide&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Preferred</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QToolButton" name="qtManualAlignToolButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>500</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>810</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QToolButton{color:#c8c8c8;background-color:#282828; border:1px solid #505050;}
+QToolButton:hover{color:#c8c8c8;background-color:#505050;border:1px solid #505050; }
+QToolButton:pressed{color:#000000;background-color:#c8c8c8;border:1px solid #505050; }</string>
+       </property>
+       <property name="text">
+        <string>Edit Side Landmarks</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_23">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Preferred</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="qtSwitchModePushButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color:#c8c8c8;background-color:#282828; border:1px solid #505050;}
+QPushButton:hover{color:#c8c8c8;background-color:#505050;border:1px solid #505050; }
+QPushButton:pressed{color:#000000;background-color:#c8c8c8;border:1px solid #505050; }</string>
+     </property>
+     <property name="text">
+      <string extracomment="進階模式 (Landmark) button">Advanced Mode</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>1</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #505050
+</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="qtCurrentButtonWidget" native="true">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>40</height>
+      </size>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="0,1,1,0">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer_8">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="qtPreviewCurrentPushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>400</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{color:#c8c8c8;background-color:#282828; border:1px solid #505050;}
+QPushButton:hover{color:#c8c8c8;background-color:#505050;border:1px solid #505050; }
+QPushButton:pressed{color:#000000;background-color:#c8c8c8;border:1px solid #505050; }</string>
+        </property>
+        <property name="text">
+         <string>Preview Current Part</string>
+        </property>
+        <property name="icon">
+         <iconset resource="CCHeadshot3.qrc">
+          <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/show.svg</normaloff>
+          <normalon>:/plugin/CCHeadshot3/Icon/RefineMesh/show.svg</normalon>
+          <activeoff>:/plugin/CCHeadshot3/Icon/RefineMesh/show_pre.svg</activeoff>
+          <activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/show.svg</activeon>
+          <selectedoff>:/plugin/CCHeadshot3/Icon/RefineMesh/show.svg</selectedoff>
+          <selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/show.svg</selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/show.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="qtFixCurrentPartPushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>400</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{color:#c8c8c8;background-color:#282828; border:1px solid #505050;}
+QPushButton:hover{color:#c8c8c8;background-color:#505050;border:1px solid #505050; }
+QPushButton:pressed{color:#000000;background-color:#c8c8c8;border:1px solid #505050; }</string>
+        </property>
+        <property name="text">
+         <string>Apply Current Part</string>
+        </property>
+        <property name="icon">
+         <iconset resource="CCHeadshot3.qrc">
+          <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/Apply.svg</normaloff>
+          <normalon>:/plugin/CCHeadshot3/Icon/RefineMesh/Apply.svg</normalon>
+          <activeoff>:/plugin/CCHeadshot3/Icon/RefineMesh/Apply_sel.svg</activeoff>
+          <activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/Apply_sel.svg</activeon>
+          <selectedoff>:/plugin/CCHeadshot3/Icon/RefineMesh/Apply_sel.svg</selectedoff>
+          <selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/Apply_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/Apply.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_9">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="qtAllButtonWidget" native="true">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>40</height>
+      </size>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="0,1,1,0">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer_10">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="qtPreviewAllPushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>400</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string notr="true"/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{color:#c8c8c8;background-color:#282828; border:1px solid #505050;}
+QPushButton:hover{color:#c8c8c8;background-color:#505050;border:1px solid #505050; }
+QPushButton:pressed{color:#000000;background-color:#c8c8c8;border:1px solid #505050; }</string>
+        </property>
+        <property name="text">
+         <string>Preview All</string>
+        </property>
+        <property name="icon">
+         <iconset resource="CCHeadshot3.qrc">
+          <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/show.svg</normaloff>
+          <normalon>:/plugin/CCHeadshot3/Icon/RefineMesh/show.svg</normalon>
+          <activeoff>:/plugin/CCHeadshot3/Icon/RefineMesh/show_pre.svg</activeoff>
+          <activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/show_pre.svg</activeon>
+          <selectedoff>:/plugin/CCHeadshot3/Icon/RefineMesh/show_pre.svg</selectedoff>
+          <selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/show_pre.svg</selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/show.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="qtFixAllPushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>400</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{color:#c8c8c8;background-color:#282828; border:1px solid #505050;}
+QPushButton:hover{color:#c8c8c8;background-color:#505050;border:1px solid #505050; }
+QPushButton:pressed{color:#000000;background-color:#c8c8c8;border:1px solid #505050; }</string>
+        </property>
+        <property name="text">
+         <string>Apply All</string>
+        </property>
+        <property name="icon">
+         <iconset resource="CCHeadshot3.qrc">
+          <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/Apply.svg</normaloff>
+          <normalon>:/plugin/CCHeadshot3/Icon/RefineMesh/Apply.svg</normalon>
+          <activeoff>:/plugin/CCHeadshot3/Icon/RefineMesh/Apply_sel.svg</activeoff>
+          <activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/Apply_sel.svg</activeon>
+          <selectedoff>:/plugin/CCHeadshot3/Icon/RefineMesh/Apply_sel.svg</selectedoff>
+          <selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/Apply_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/Apply.svg</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_11">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+  <action name="qtResetAllToAutoAction">
+   <property name="icon">
+    <iconset resource="CCHeadshot3.qrc">
+     <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/reset-all.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/reset-all.svg</iconset>
+   </property>
+   <property name="text">
+    <string>ResetAllToAuto</string>
+   </property>
+  </action>
+  <action name="qtResetAllToLastFixAction">
+   <property name="icon">
+    <iconset resource="CCHeadshot3.qrc">
+     <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/reset-all-to-last.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/reset-all-to-last.svg</iconset>
+   </property>
+   <property name="text">
+    <string>ResetAllToLastFix</string>
+   </property>
+   <property name="toolTip">
+    <string>ResetAllToLastFix</string>
+   </property>
+  </action>
+  <action name="qtResetSelectedToAutoAction">
+   <property name="icon">
+    <iconset resource="CCHeadshot3.qrc">
+     <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/reset-selected.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/reset-selected.svg</iconset>
+   </property>
+   <property name="text">
+    <string>ResetSelectedToAuto</string>
+   </property>
+   <property name="toolTip">
+    <string>ResetSelectedToAuto</string>
+   </property>
+  </action>
+  <action name="qtResetSelectedToLastFixAction">
+   <property name="icon">
+    <iconset resource="CCHeadshot3.qrc">
+     <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/reset-selected-to-last.svg</normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/reset-selected-to-last.svg</iconset>
+   </property>
+   <property name="text">
+    <string>ResetSelectedToLastFix</string>
+   </property>
+   <property name="toolTip">
+    <string>ResetSelectedToLastFix</string>
+   </property>
+  </action>
+  <action name="qtEyeDefaultAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="CCHeadshot3.qrc">
+     <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes.svg</normaloff>
+     <activeoff>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes.svg</activeoff>
+     <activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_sel.svg</activeon>
+     <selectedoff>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_sel.svg</selectedoff>
+     <selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Default</string>
+   </property>
+   <property name="toolTip">
+    <string>EyeDefaultAction</string>
+   </property>
+  </action>
+  <action name="qtEyeWithDoubleLidAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="CCHeadshot3.qrc">
+     <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_lid.svg</normaloff>
+     <activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_lid_sel.svg</activeon>
+     <selectedoff>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_lid_sel.svg</selectedoff>
+     <selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_lid_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_lid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>DoubleLid</string>
+   </property>
+   <property name="toolTip">
+    <string>EyeWithDoubleLidAction</string>
+   </property>
+  </action>
+  <action name="qtEyeWithSocketAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="CCHeadshot3.qrc">
+     <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_socket.svg</normaloff>
+     <activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_socket_sel.svg</activeon>
+     <selectedoff>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_socket_sel.svg</selectedoff>
+     <selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_socket_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_socket.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Socket</string>
+   </property>
+   <property name="toolTip">
+    <string>EyeWithSocketAction</string>
+   </property>
+  </action>
+  <action name="qtEyeWithDoubleLidAndSocketAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="CCHeadshot3.qrc">
+     <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_socket_lid.svg</normaloff>
+     <activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_socket_lid_sel.svg</activeon>
+     <selectedoff>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_socket_lid_sel.svg</selectedoff>
+     <selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_socket_lid_sel.svg</selectedon>:/plugin/CCHeadshot3/Icon/RefineMesh/eyes_socket_lid.svg</iconset>
+   </property>
+   <property name="text">
+    <string>DoubleLid And Socket</string>
+   </property>
+   <property name="toolTip">
+    <string>EyeWithDoubleLidAndSocketAction</string>
+   </property>
+  </action>
+  <action name="qtNoseDefaultAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="CCHeadshot3.qrc">
+     <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/nose.svg</normaloff>
+     <activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/nose_sel.svg</activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/nose.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Default</string>
+   </property>
+   <property name="toolTip">
+    <string>NoseDefaultAction</string>
+   </property>
+  </action>
+  <action name="qtNoseWithNasalAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="CCHeadshot3.qrc">
+     <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/nose-nasal.svg</normaloff>
+     <activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/nose-nasal_sel.svg</activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/nose-nasal.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Nasal</string>
+   </property>
+   <property name="toolTip">
+    <string>NoseWithNasalAction</string>
+   </property>
+  </action>
+  <action name="qtMouthDefaultAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="CCHeadshot3.qrc">
+     <normaloff>:/plugin/CCHeadshot3/Icon/RefineMesh/lips.svg</normaloff>
+     <activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/lips_sel.svg</activeon>:/plugin/CCHeadshot3/Icon/RefineMesh/lips.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Default</string>
+   </property>
+   <property name="toolTip">
+    <string>MouthDefaultAction</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QItemLabel</class>
+   <extends>QLabel</extends>
+   <header>QItemLabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QColorButton</class>
+   <extends>QToolButton</extends>
+   <header>QColorButton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QComboSpinBox</class>
+   <extends>QWidget</extends>
+   <header>QComboSpinBox.h</header>
+   <addpagemethod>addPage</addpagemethod>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QComboDoubleSpinBoxHorizontalLabel</class>
+   <extends>QWidget</extends>
+   <header>QComboDoubleSpinBoxHorizontalLabel.h</header>
+   <addpagemethod>addPage</addpagemethod>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="CCHeadshot3.qrc"/>
+  <include location="../ICMaterialUI/ICMaterialUI.qrc"/>
+  <include location="../CCTransformer/CCTransformer.qrc"/>
+ </resources>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
+</ui>
